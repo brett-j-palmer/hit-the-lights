@@ -1,7 +1,4 @@
 import './style.css'
-import heroImg from './assets/hero.png'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
 import { setupCounter } from './counter.ts'
 
 import { mountWebApp } from './web/mountWebApp';
@@ -35,44 +32,44 @@ console.log(grid.toString());
 grid.triggerCell(2,0)
 console.log(grid.toString());
 
-function renderCell (cell: Cell) {
-  if (cell.lit) {
-    return `<button> On </button>`
-  }
-  else {
-    return `<button> Off </button>`
-  }
-}
+// function renderCell (cell: Cell) {
+//   if (cell.lit) {
+//     return `<button> On </button>`
+//   }
+//   else {
+//     return `<button> Off </button>`
+//   }
+// }
 
-function renderGrid (grid: Grid) {
-  return grid.cells.map((row) => 
-    row.map((cell)=> 
-      renderCell(cell)
-    ).join(' ')
-  ).join(' ')
-}
+// function renderGrid (grid: Grid) {
+//   return grid.cells.map((row) => 
+//     row.map((cell)=> 
+//       renderCell(cell)
+//     ).join(' ')
+//   ).join(' ')
+// }
 
-function renderCell1 (cell: Cell) {
-  var button = document.createElement("BUTTON"); 
-  var text;
-  if (cell.lit) {
-    text = document.createTextNode("On");
-  }
-  else {
-    text = document.createTextNode("Off");
-  }
-  button.appendChild(text);
-  document.body.appendChild(button);
-  return button;
-}
+// function renderCell1 (cell: Cell) {
+//   var button = document.createElement("BUTTON"); 
+//   var text;
+//   if (cell.lit) {
+//     text = document.createTextNode("On");
+//   }
+//   else {
+//     text = document.createTextNode("Off");
+//   }
+//   button.appendChild(text);
+//   document.body.appendChild(button);
+//   return button;
+// }
 
-function renderGrid1 (grid: Grid) {
-  return grid.cells.map((row) => 
-    row.map((cell)=> 
-      renderCell(cell)
-    ).join(' ')
-  ).join(' ')
-}
+// function renderGrid1 (grid: Grid) {
+//   return grid.cells.map((row) => 
+//     row.map((cell)=> 
+//       renderCell(cell)
+//     ).join(' ')
+//   ).join(' ')
+// }
 
 const root = document.querySelector<HTMLElement>('#app');
 
